@@ -1,0 +1,9 @@
+---
+applications:
+  - name: 12capm-srv
+    path: .
+    memory: 256M
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - 12capm-db

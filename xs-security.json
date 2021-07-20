@@ -1,0 +1,42 @@
+{
+    "xsappname": "12capm",
+    "tenant-mode": "dedicated",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.Viewer",
+            "description": "Viewer"
+        },
+        {
+            "name": "$XSAPPNAME.Admin",
+            "description": "Administrator"
+        }
+    ],
+    "attributes": [
+        {
+            "name": "BankName",
+            "description": "BankName",
+            "valueType": "string"
+        }
+    ],
+    "role-templates": [
+        {
+            "name": "Viewer",
+            "description": "Viewer",
+            "attribute-references": [
+                {
+                    "name": "BankName"
+                }
+            ],
+            "scope-references": [
+                "$XSAPPNAME.Viewer"
+            ]
+        },
+        {
+            "name": "Admin",
+            "description": "Administrator",
+            "scope-references": [
+                "$XSAPPNAME.Admin"
+            ]
+        }
+    ]
+}

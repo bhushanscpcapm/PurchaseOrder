@@ -1,0 +1,72 @@
+GET http://localhost:4004/CatalogService/
+
+###
+GET http://localhost:4004/CatalogService/$metadata
+
+###
+GET http://localhost:4004/CatalogService/EmployeeSet?$top=2
+
+###
+POST http://localhost:4004/CatalogService/EmployeeSet
+Content-Type: application/json
+{
+    "nameFirst": "Bhushan",
+    "nameMiddle": null,
+    "nameLast": "Spring",
+    "nameInitials": null,
+    "sex": "F",
+    "language": "E",
+    "phoneNumber": "+1 224 374 524",
+    "email": "sally.spring@itelo.info",
+    "loginName": "SPRINGS",
+    "accountNumber": "111222333",
+    "bankId": "510000655",
+    "bankName": "HDFC"  
+}
+
+### 
+POST http://localhost:4004/CatalogService/EmployeeSet
+header name: Test
+
+Content-Type: application/json
+{
+    "nameFirst": "Bhushan",
+    "nameMiddle": null,
+    "nameLast": "Spring",
+    "nameInitials": null,
+    "sex": "F",
+    "language": "E",
+    "phoneNumber": "+1 224 374 524",
+    "email": "sally.spring@itelo.info",
+    "loginName": "SPRINGS",
+    "accountNumber": "111222333",
+    "bankId": "510000655",
+    "bankName": "HDFC"  
+}
+
+###Get a particular employee
+GET http://localhost:4004/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+
+### Put command
+PUT http://localhost:4004/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type: application/json
+{
+  "salaryAmount" : "55549",
+  "Currency_code": "USD"
+}
+
+### read top 5 records
+GET http://localhost:4005/CatalogService/POSet?$top=5
+
+###Boost 
+
+POST http://localhost:4005/CatalogService/POSet("02BD2137-0890-1EEA-A6C2-BB55C1978999")/CatalogService.boost
+Content-Type: application/json
+
+
+###Get Largest Order
+GET http://localhost:4005/CatalogService/POSet('02BD2137-0890-1EEA-A6C2-BB55C1978999')/CatalogService.largeOrder()
+
+### send with Mock user
+GET http://localhost:4004/CatalogService/EmployeeSet?$top=2
+Authorization: Basic bhushan:
