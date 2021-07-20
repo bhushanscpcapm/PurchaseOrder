@@ -1,6 +1,6 @@
 general:
   pipeline: "sap-cloud-sdk"
-  buildTool: "mta"
+  buildTool: "npm"
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false

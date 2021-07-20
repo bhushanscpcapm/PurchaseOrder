@@ -1,9 +1,9 @@
 # CAP 12capm
-# _out
-# *.db
-# connection.properties
-# default-*.json
-# gen/
+_out
+*.db
+connection.properties
+default-*.json
+gen/
 node_modules/
 target/
 
