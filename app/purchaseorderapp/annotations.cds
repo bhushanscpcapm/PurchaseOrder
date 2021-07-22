@@ -2,7 +2,6 @@ using {CatalogService} from '../../srv/CatalogService';
 
 
 //Annotation for First screen
-
 //Property Level annotation
 annotate CatalogService.POSet with {
     PARTNER_GUID @(
