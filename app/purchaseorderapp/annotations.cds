@@ -11,6 +11,7 @@ annotate CatalogService.POSet with {
 
 };
 
+
 @cds.odata.valuelist
 annotate CatalogService.BPSet with @(UI : {Identification : [{
     $Type : 'UI.DataField',
