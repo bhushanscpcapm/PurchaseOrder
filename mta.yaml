@@ -8,8 +8,8 @@ build-parameters:
   before-all:
     - builder: custom
       commands:
-        - npm install --production
-        - npm -p @sap/cds-dk cds build --production
+      - npm install --production
+      - npx cds build --production
 modules:
   - name: 12capm-srv
     type: nodejs
