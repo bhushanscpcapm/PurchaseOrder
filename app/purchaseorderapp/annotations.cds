@@ -8,6 +8,7 @@ annotate CatalogService.POSet with {
         common           : {Text : COMPANY_NAME, },
         ValueList.entity : CatalogService.BPSet
     )
+    
 };
 @cds.odata.valuelist
 annotate CatalogService.BPSet with @(UI : {Identification : [{
